@@ -7,12 +7,16 @@ function App() {
   useGSAP(() => {
     gsap.to("#green-box", {
       x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotation: 360,
+      duration: 1,
     })
   }, [])
 
   return (
-    <div>
-      <div id='#greenBox' className='w-50 h-50 bg-green-400 rounded-2xl border'></div>
+    <div className='h-full flex justify-center items-center'>
+      <div id='green-box' className='w-50 h-50 bg-green-400 rounded-2xl border'></div>
     </div>
   )
 }
