@@ -4,13 +4,24 @@ import React from 'react'
 
 function App() {
 
+  // useGSAP(() => {
+  //   gsap.to("#green-box", {
+  //     x: 250,
+  //     repeat: -1,
+  //     yoyo: true,
+  //     rotation: 360,
+  //     duration: 1,
+  //   })
+  // }, [])
+
   useGSAP(() => {
-    gsap.to("#green-box", {
+    gsap.from("#green-box", {
       x: 250,
       repeat: -1,
       yoyo: true,
       rotation: 360,
-      duration: 1,
+      duration: 3,
+      ease: 'power1.inOut'
     })
   }, [])
 
